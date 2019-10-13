@@ -3,7 +3,7 @@
 using namespace std;
 
 // принимает число, возвращает сумму цифр 
-int sumOfDigit(int number)
+int sumOfDigit3(int number)
 {
 	int e, d, s;
 
@@ -31,7 +31,7 @@ int invertedNumber(int number)
 }
 
 // принимает целое число, возвращает произведение его цифр
-int prodOfDigit(int number)
+int prodOfDigit3(int number)
 {
 	int e, d, s;
 
@@ -45,9 +45,9 @@ int prodOfDigit(int number)
 }
 
 // принимает два трёхзначных числа, возвращает число с максимальной суммой цифр
-int maxSumOfDigit(int number1, int number2)
+int maxSumOfDigit3(int number1, int number2)
 {
-	if (sumOfDigit(number1) > sumOfDigit(number2))
+	if (sumOfDigit3(number1) > sumOfDigit3(number2))
 	{
 		return number1;
 	}
@@ -62,10 +62,10 @@ int maxSumOfDigit(int number1, int number2)
 */
 int task1(int n1, int n2)
 {
-	int s1 = sumOfDigit(n1);
-	int s2 = sumOfDigit(n2);
-	int p1 = prodOfDigit(n1);
-	int p2 = prodOfDigit(n2);
+	int s1 = sumOfDigit3(n1);
+	int s2 = sumOfDigit3(n2);
+	int p1 = prodOfDigit3(n1);
+	int p2 = prodOfDigit3(n2);
 
 	if (s1 == p2)
 	{
@@ -126,7 +126,59 @@ int power20(int n)
 */
 int maxProdOfDigit(int a, int b)
 {
-	return 0; // пока что возвращает ноль, ты это изменишь
+	int const number1 = a;
+	int const number2 = b;
+	int e1, d1, s1;
+	e1 = a % 10;
+	a /= 10; // number = number / 10
+	d1 = a % 10;
+	a /= 10;
+	s1 = a % 10;
+
+	int e2, d2, s2, t2;
+	e2 = b % 10;
+	b /= 10; // number = number / 10
+	d2 = b % 10;
+	b /= 10;
+	s2 = b % 10;
+	b /= 10;
+	t2 = b % 10;
+
+	int product1 = e1 * d1 * s1;
+	int product2 = e2 * d2 * s2 * t2;
+	if (product1 > product2)
+	{
+		return number1;
+	}
+	return number2;
+}
+
+/*
+принимает натуральное число, возвращает сумму его цифр
+*/
+int sumOfDigit(int n)
+{
+	int sum = 0;
+	while (n != 0)
+	{
+		sum += n % 10;
+		n /= 10;
+	}
+	return sum;
+}
+
+/*
+принимает натуральное число, возвращает количеств цифр в числе
+*/
+int lengthOfNumber(int n)
+{
+	int count = 0;
+	while (n != 0)
+	{
+		++count;
+		n /= 10;
+	}
+	return count;
 }
 
 /*
@@ -138,9 +190,32 @@ int numbersGluing(int a, int b)
 	return 0; // пока что возвращает ноль, ты это изменишь
 }
 
+/*
+принимает натуральное число(количество цифр неизвестно), возвращает произведение его цифр
+*/
+int prodOfDigit(int n)
+{
+	return 0; // пока что возвращает ноль, ты это изменишь
+}
+
+/*
+принимает трёхзначное число, возвращает перевёрнутое число
+*/
+int invertedNumber3(int n)
+{
+	return 0; // пока что возвращает ноль, ты это изменишь
+}
+
+/*
+принимает натуральное число(количество цифр неизвестно), возвращает перевёрнутое число
+*/
+int invertedNumber(int n)
+{
+	return 0; // пока что возвращает ноль, ты это изменишь
+}
 
 int main()
 {
-	cout << power20(2);
+	cout << sumOfDigit(1234);
 	return 0;
 }
