@@ -97,7 +97,13 @@ int power15(int n)
 */
 int power11(int n)
 {
-	return 0; // пока что возвращает ноль, ты это изменишь
+	int m = n;
+	n *= n;
+	m *= n;
+	n *= n;
+	n *= n;
+	n *= m;
+	return n; // пока что возвращает ноль, ты это изменишь
 }
 
 /*
@@ -105,7 +111,13 @@ int power11(int n)
 */
 int power20(int n)
 {
-	return 0; // пока что возвращает ноль, ты это изменишь
+	n *= n;
+	n *= n;
+	int m = n;
+	n *= n;
+	n *= n;
+	n *= m;
+	return n; // пока что возвращает ноль, ты это изменишь
 }
 
 /*
@@ -129,6 +141,6 @@ int numbersGluing(int a, int b)
 
 int main()
 {
-	cout << maxSumOfDigit(456, 650);
+	cout << power20(2);
 	return 0;
 }
