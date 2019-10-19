@@ -211,6 +211,7 @@ int invertedNumber3(int n)
 */
 int invertedNumber(int n)
 {
+	int x = 0;
 	return 0; // пока что возвращает ноль, ты это изменишь
 }
 
