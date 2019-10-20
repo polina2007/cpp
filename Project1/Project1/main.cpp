@@ -187,7 +187,7 @@ int lengthOfNumber(int n)
 */
 int numbersGluing(int a, int b)
 {
-	return 0; // пока что возвращает ноль, ты это изменишь
+	return 10000 * a + b;
 }
 
 /*
@@ -195,7 +195,13 @@ int numbersGluing(int a, int b)
 */
 int prodOfDigit(int n)
 {
-	return 0; // пока что возвращает ноль, ты это изменишь
+	int product = 1;
+	while (n != 0)
+	{
+		product *= n % 10;
+		n /= 10;
+	}
+	return product;
 }
 
 /*
@@ -203,7 +209,17 @@ int prodOfDigit(int n)
 */
 int invertedNumber4(int n)
 {
-	return 0; // пока что возвращает ноль, ты это изменишь
+	int e, d, s, x;
+
+	e = n % 10;
+	n /= 10;
+	d = n % 10;
+	n /= 10;
+	s = n % 10;
+	n /= 10;
+	x = n % 10;
+
+	return e * 1000 + d * 100 + s * 10 + x;
 }
 
 /*
@@ -214,8 +230,125 @@ int invertedNumber(int n)
 	return 0; // пока что возвращает ноль, ты это изменишь
 }
 
+/*
+принимает натуральное число, возвращает сумму нечётных цифр числа
+*/
+int sumOfOddDigit(int n)
+{
+	int sum = 0;
+	while (n != 0)
+	{
+		int digit = n % 10;
+		if (digit % 2 == 1)
+		{
+			sum += digit;
+		}
+		n /= 10;
+	}
+	return sum;
+}
+
+/*
+принимает натуральное число, возвращает произведение чётных цифр числа
+*/
+int prodOfEvenDigit(int n)
+{
+	int prod = 1;
+	while (n != 0)
+	{
+		int digit = n % 10;
+		if (digit % 2 == 0)
+		{
+			prod *= digit;
+		}
+		n /= 10;
+	}
+	return prod;
+}
+
+/*
+принимает натуральное число, возвращает сумму цифр, кратных 3
+*/
+int task1(int n)
+{
+	int sum = 0;
+	while (n != 0)
+	{
+		int digit = n % 10;
+		if (digit % 3 == 0)
+		{
+			sum += digit;
+		}
+		n /= 10;
+	}
+	return sum;
+}
+
+/*
+принимает натуральное число n, возвращает сумму чисел от 1 до n
+например, принимает 5, возвращает 1 + 2 + 3 + 4 + 5 = 15
+с помощью цикла while
+*/
+int task2(int n)
+{
+	int sum = 0;
+	while (n != 0)
+	{
+		sum += n;
+		--n;
+	}
+	return sum;
+}
+
+/*
+принимает натуральное число n, возвращает сумму чисел от 1 до n
+например, принимает 5, возвращает 1 + 2 + 3 + 4 + 5 = 15
+с помощью цикла for
+*/
+int task3(int n)
+{
+	int sum = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		sum += i;
+	}
+	return sum;
+}
+
+/*
+принимает натуральное число n, возвращает произведение чисел от 1 до n
+например, принимает 5, возвращает 1 * 2 * 3 * 4 * 5 = 15
+с помощью цикла while
+*/
+int task4(int n)
+{
+	int sum = 1;
+	while (n != 0)
+	{
+		sum *= n;
+		--n;
+	}
+	return sum;
+}
+
+
+/*
+принимает натуральное число n, возвращает произведение чисел от 1 до n
+например, принимает 5, возвращает 1 * 2 * 3 * 4 * 5 = 15
+с помощью цикла for
+*/
+int task5(int n)
+{
+	int sum = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		sum *= i;
+	}
+	return sum;
+}
+
 int main()
 {
-	cout << sumOfDigit(1234);
+	cout << task5(2);
 	return 0;
 }
