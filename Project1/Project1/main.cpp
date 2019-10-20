@@ -17,7 +17,7 @@ int sumOfDigit3(int number)
 }
 
 // принимает число, возвращает перевёрнутое число
-int invertedNumber(int number)
+int invertedNumber3(int number)
 {
 	int e, d, s;
 	
@@ -199,9 +199,9 @@ int prodOfDigit(int n)
 }
 
 /*
-принимает трёхзначное число, возвращает перевёрнутое число
+принимает четырёхзначное число, возвращает перевёрнутое число
 */
-int invertedNumber3(int n)
+int invertedNumber4(int n)
 {
 	return 0; // пока что возвращает ноль, ты это изменишь
 }
@@ -211,7 +211,6 @@ int invertedNumber3(int n)
 */
 int invertedNumber(int n)
 {
-	int x = 0;
 	return 0; // пока что возвращает ноль, ты это изменишь
 }
 
