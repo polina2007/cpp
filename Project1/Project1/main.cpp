@@ -7,6 +7,6 @@ using namespace std;
 
 int main()
 {
-	cout << task5(2);
+	cout << minDigit2(13571);
 	return 0;
 }

@@ -235,9 +235,82 @@ int numbersGluing(int a, int b)
 
 
 /*
-принимает натуральное число(количество цифр неизвестно), возвращает перевёрнутое число
+принимает натуральное число(количество цифр неизвестно), возвращает максимальную цифру
 */
-int invertedNumber(int n)
+int maxDigit(int n)
 {
-	return 0; // пока что возвращает ноль, ты это изменишь
+	int maxDigit = 0;
+	while (n != 0)
+	{
+		int digit = n % 10;
+		if (digit > maxDigit)
+		{
+			maxDigit = digit;
+		}
+		n /= 10;
+	}
+
+	return maxDigit;
+}
+
+/*
+принимает натуральное число(количество цифр неизвестно), возвращает минимальную цифру
+*/
+int minDigit(int n)
+{
+	int minDigit = 9;
+	while (n != 0)
+	{
+		int digit = n % 10;
+		if (digit < minDigit)
+		{
+			minDigit = digit;
+		}
+		n /= 10;
+	}
+
+	return minDigit;
+}
+
+/*
+принимает натуральное число(количество цифр неизвестно), возвращает минимальную чётную цифру
+*/
+int minDigit2(int n)
+{
+	int minDigit = 9;
+	while (n != 0)
+	{
+		int digit = n % 10;
+		if (digit < minDigit && digit % 2 == 0)
+		{
+			minDigit = digit;
+		}
+		n /= 10;
+	}
+
+	if (minDigit == 9)
+	{
+		return -1;
+	}
+	else
+	{
+		return minDigit;
+	}
+}
+
+/*
+принимает натуральное число(количество цифр неизвестно), возвращает максимальную цифру, кратную 7
+*/
+int maxDigit7(int n)
+{
+	int maxDigit = 0;
+	while (n != 0)
+	{
+		int digit = n % 10;
+		if (digit > maxDigit && digit % 7 == 0)
+		{
+			maxDigit = digit;
+		}
+		return maxDigit;
+	} 
 }
