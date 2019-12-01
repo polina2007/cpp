@@ -1,12 +1,12 @@
-#include <iostream>
-#include "digits.h"
-#include "degree.h"
-#include "sumAndProd.h"
+//#include <iostream>
+//#include "digits.h"
+//#include "degree.h"
+//#include "sumAndProd.h"
+#include "l011219.h"
 
 using namespace std;
 
 int main()
 {
-	cout << minDigit2(13571);
 	return 0;
 }

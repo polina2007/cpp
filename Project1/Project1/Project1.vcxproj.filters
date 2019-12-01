@@ -27,6 +27,9 @@
     <ClCompile Include="sumAndProd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="l011219.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="digits.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sumAndProd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="l011219.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
