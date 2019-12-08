@@ -123,16 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="degree.cpp" />
-    <ClCompile Include="digits.cpp" />
-    <ClCompile Include="l011219.cpp" />
+    <ClCompile Include="l081219.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="sumAndProd.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="degree.h" />
     <ClInclude Include="digits.h" />
     <ClInclude Include="l011219.h" />
+    <ClInclude Include="l081219.h" />
     <ClInclude Include="sumAndProd.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

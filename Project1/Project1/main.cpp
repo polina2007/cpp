@@ -1,12 +1,18 @@
-//#include <iostream>
-//#include "digits.h"
-//#include "degree.h"
-//#include "sumAndProd.h"
-#include "l011219.h"
+#include <iostream>
+#include "l081219.h"
 
 using namespace std;
 
 int main()
 {
+	int n;
+	int k = 0;
+	cin >> n;
+	while (n != 0)
+	{
+		++k;
+		n /= 10;
+	}
+	cout << k;
 	return 0;
 }
