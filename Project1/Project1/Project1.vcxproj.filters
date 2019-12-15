@@ -18,25 +18,5 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="l081219.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="digits.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="degree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sumAndProd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="l011219.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="l081219.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

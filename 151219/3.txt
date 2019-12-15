@@ -7,13 +7,13 @@ int main()
 {
 	int a, m, n;
 	m = INT_MIN;
-
+	
 	cin >> n;
 
 	for (int i = 1; i <= n; ++i)
 	{
 		cin >> a;
-		if (a > m && a % 2 == 0)
+		if (a > m)
 		{
 			m = a;
 		}

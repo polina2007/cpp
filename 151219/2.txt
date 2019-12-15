@@ -1,0 +1,25 @@
+#include <iostream>
+#include "l081219.h"
+
+using namespace std;
+
+int main()
+{
+	int a, b, c, m;
+	cout << "input numbers: ";
+	cin >> a >> b >> c;
+	if (a < b)
+	{
+		m = b;
+	}
+	else
+	{
+		m = a;
+	}
+	if (c > m)
+	{
+		m = c;
+	}
+	cout << "max = " << m;
+	return 0;
+}
