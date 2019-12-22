@@ -1,0 +1,24 @@
+#include <iostream>
+#include "l081219.h"
+
+using namespace std;
+
+int main()
+{
+	int a, m, n;
+	m = INT_MAX;
+
+	cin >> n;
+
+    for (int i = 1; i <= n; ++i)
+	{
+		cin >> a;
+		if (a < m && a % 10 == 4)
+		{
+			m = a;
+		}
+	}
+
+	cout << m;
+	return 0;
+}
