@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, b, c;
+	b = 0;
+
+	cin >> c;
+
+	for (int i = 1; i <= c; ++i)
+	{
+		cin >> a;
+		if (a % 3 == 0 && a % 10 == 4)
+		{
+			b += 1;
+		}
+	}
+	cout << b;
+	return 0;
+}

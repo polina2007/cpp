@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, b, c;
+	b = INT_MIN;
+
+	cin >> c;
+
+	for (int i = 1; i <= c; ++i)
+	{
+		cin >> a;
+		if (a % 4 == 0 && b < a)
+		{
+		b = a;
+		}
+	}
+	cout << b;
+	return 0;
+}
