@@ -4,16 +4,22 @@ using namespace std;
 
 int main()
 {
-	int a, c;
-	double b = 1;
+	int a, c, d;
+	double b = 0;
+	d = 0;
 
 	cin >> c;
 	for (int i = 1; i <= c; ++i)
 	{
 		cin >> a;
-	    b *= a;
+		if (a % 3 == 0)
+		{
+			b += a;
+			d += 1;
+
+		}
 	}
 
-	cout << b;
+	cout << b / d;
 	return 0;
 }
