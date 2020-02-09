@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, c;
+	double b1;
+	double b;
+	b = INT_MIN;
+	b1 = INT_MAX;
+
+	cin >> c;
+
+	for (int i = 1; i <= c; ++i)
+	{
+		cin >> a;
+		if (a % 3 == 0 && b < a)
+		{
+			b = a;
+		}
+	    if (a % 7 == 0 && b1 > a)
+	    {
+		    b1 = a;
+	    }
+}
+	cout <<(b + b1)/2;
+	return 0;
+}
