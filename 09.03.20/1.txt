@@ -25,17 +25,6 @@ int main()
 			f += a;
 		}
 	}
-		if (d > e)
-		{
-			cout << b;
-		}
-		if (e > d)
-		{
-			cout << f;
-		}
-		if (d == e)
-		{
-			cout << f + b;
-		}
+    cout << b / d - f / e;
 	return 0;
 }
