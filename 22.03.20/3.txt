@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a;
+	int c = 0;
+	cin >> a;
+	while (a != 0)
+	{
+		int b = a % 10;
+		c += b * b;
+		a /= 10;
+	}
+	cout << c;
+	return 0;
+}
