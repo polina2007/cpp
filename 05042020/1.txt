@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int amount;
+	int amountOfEven = 0;
+	double sumOfEven = 0;
+	cin >> amount;
+	for (int i = 0; i < amount ; ++i)
+	{
+		int x;
+		cin >> x;
+		if (x % 2 == 1)
+		{
+			sumOfEven += x;
+			++amountOfEven;
+		}
+	}
+	cout << sumOfEven / amountOfEven;
+	return 0;
+}
