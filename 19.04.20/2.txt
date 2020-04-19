@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	// пользователь вводит количество чисел, затем сами числа, вывести разность между количеством отрицательных и положительных
+	int amount, number;
+	int amountOfPositive = 0;
+	int amountOfNegative = 0;
+	cin >> amount;
+
+	for (int i = 0; i < amount; i++)
+	{
+		cin >> number;
+
+		if (number > 0)
+		{
+			++amountOfPositive;
+		}
+
+		if (number < 0)
+		{
+			++amountOfNegative;
+		}
+	}
+
+	cout << amountOfPositive - amountOfNegative;
+	return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	// пользователь вводит количество чисел, затем сами числа, вывести разность между средним арифметическим чисел кратных 3 и чисел, оканчивающихся на 4
+	int amount;
+	cin >> amount;
+
+	double sumOfNumbersDividedBy3 = 0;
+	int amountOfNumbersDividedBy3 = 0;
+	double sumOfNumbersEndWith4 = 0;
+	int amountOfNumbersEndWith4 = 0;
+
+	for (int i = 0; i < amount; i++)
+	{
+		int number;
+		cin >> number;
+		if (number % 3 == 0)
+		{
+			sumOfNumbersDividedBy3 += number;
+			++amountOfNumbersDividedBy3;
+		}
+		if (number % 10 == 4)
+		{
+			sumOfNumbersEndWith4 += number;
+			++amountOfNumbersEndWith4;
+		}
+	}
+
+	cout << sumOfNumbersDividedBy3 / amountOfNumbersDividedBy3 - sumOfNumbersEndWith4 / amountOfNumbersEndWith4;
+	return 0;
+}
