@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	// пользователь вводит натуральное число, вывести среднее арифметическое его чётных цифр
+	int number;
+	cin >> number;
+	double sumOfEven = 0;
+	int amountOfEven = 0;
+
+	while (number != 0)
+	{
+		int currentDigit = number % 10;
+		if (currentDigit % 2 == 0)
+		{
+			sumOfEven += currentDigit;
+			++amountOfEven;
+		}
+		number /= 10;
+	}
+
+	cout << sumOfEven / amountOfEven;
+	return 0;
+}

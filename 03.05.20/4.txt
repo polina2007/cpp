@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	// пользователь вводит натуральное число, вывести среднее арифметическое его цифр
+	int number;
+	double sum = 0;
+	int amount = 0;
+	cin >> number;
+
+	while (number != 0)
+	{
+		++amount;
+		sum += number % 10;
+		number /= 10;
+	}
+
+	cout << sum / amount;
+	return 0;
+}
