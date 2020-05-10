@@ -1,0 +1,28 @@
+/*
+пользователь вводит натуральное число вывести процентное содержание нечётных цифр
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int number;
+	int amount = 0;
+	cin >> number;
+	double amountOfEven= 0; 
+
+	while (number != 0)
+	{
+		++amount;
+		number /= 10;
+		if (number % 2 == 0)
+		{
+			amountOfEven += 1;
+		}
+	}
+
+	cout << amountOfEven / amount;
+	return 0;
+}

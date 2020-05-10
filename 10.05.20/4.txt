@@ -1,0 +1,52 @@
+/*
+пользователь вводит натуральное число
+если количество чётных цифр больше количества нечетных цифр, то вывести процентное содержание чётных
+если количество нечётных цифр больше количества четных цифр, то вывести процентное содержание нечётных
+если количество нечётных цифр равно количеству нечетных цифр, то вывести среднее арифметическое всех цифр числа
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int number;
+	cin >> number;
+	double amountOfEven = 0;
+	double amountOfOdd = 0;
+    int sumOfEven = 0;
+	int sumOfOdd = 0;
+	int amount = 0;
+
+	while (number != 0)
+	{
+		++amount;
+		number /= 10;
+		if (number % 2 == 1)
+		{
+			sumOfOdd += number;
+			++amountOfOdd;
+		}
+		if (number % 2 == 0)
+		{
+			sumOfEven += number;
+			++amountOfEven;
+		}
+	}
+
+	if (amountOfEven > amountOfOdd)
+	{
+		cout << amountOfEven / amount * 100;
+	}
+	if (amountOfEven < amountOfOdd)
+	{
+		cout << amountOfOdd / amount * 100;
+	}
+	if (amountOfEven == amountOfOdd)
+	{
+		cout << (sumOfEven + sumOfOdd) / amount;
+	}
+	 
+	return 0;
+}

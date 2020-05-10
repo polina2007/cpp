@@ -1,0 +1,28 @@
+/*
+пользователь вводит три целых числа, вывести наибольшее из них
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, b, c;
+	cin >> a >> b >> c;
+	// твоя программа
+	// cout << максимальное 
+	if (a > b && a > c)
+	{
+		cout << a;
+	}
+	if (c > a && c > b)
+	{
+		cout << c;
+	}
+	if (b > c && b > a)
+	{
+		cout << b;
+	}
+	return 0;
+}
