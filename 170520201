@@ -1,0 +1,33 @@
+/*
+пользователь вводит количество чисел, затем сами числа
+вывести среднее арифметическое между минимальным четным и максимальным нечетным из них
+*/
+
+#inlude <iostream>
+
+using namespace std;
+
+int main()
+{
+	int number;
+	int min = INT_MAX;
+	int max = INT_MIN;
+	int amout;
+	
+	cin >> amout;
+	for (int i = 0; i < amout; ++i)
+	{
+		cin >> number;
+		if (number < min && number % 2 = 0)
+		{
+			min = number;
+		}
+		if (number > max && number % 2 = 1)
+		{
+			max = number;
+		}
+    }
+		
+	cout << (max + min) / 2.0;
+	return 0; 
+}
