@@ -1,0 +1,77 @@
+/*
+Напишите программу, которая в последовательности целых чисел определяет сумму двух наибольших и сумму двух наименьших.
+Программа должна вывести две этих суммы в указанном порядке. Программа получает на вход целые числа, количество введённых чисел не известно,
+последовательность чисел заканчивается числом 0 (0 — признак окончания ввода, не входит в последовательность). Количество чисел не превышает 1000. 
+Введённые числа по модулю не превышают 30 000.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int number;
+	int max1 = INT_MIN;
+	int max2 = INT_MIN;
+	int min1 = INT_MAX;
+	int min2 = INT_MAX;
+
+	cin >> number;
+	
+	while (number != 0)
+	{
+		#pragma region MaxCases
+		bool caseMax1 = number <= max2;
+		bool caseMax2 = number > max2 && number <= max1;
+		bool caseMax3 = number > max1;
+		#pragma endregion
+
+		#pragma region MinCases
+		bool caseMin1 = number >= min2;
+		bool caseMin2 = number >= min1 && number < min2;
+		bool caseMin3 = number < min1;
+		#pragma endregion
+
+		#pragma region MaxCalculation
+		if (caseMax1)
+		{
+
+		}
+
+		if (caseMax2)
+		{
+			max2 = number;
+		}
+
+		if (caseMax3)
+		{
+			max2 = max1;
+			max1 = number;
+		}
+		#pragma endregion
+
+		#pragma region MinCalculation
+		if (caseMin1)
+		{
+
+		}
+
+		if (caseMin2)
+		{
+			min2 = number;
+		}
+
+		if (caseMin3)
+		{
+			min2 = min1;
+			min1 = number;
+		}
+		#pragma endregion
+
+		cin >> number;
+	}
+
+	cout << max1 + max2 << " "  << min1 + min2;
+	return 0;
+}
