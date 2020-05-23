@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int number;
+	int max = INT_MIN;
+	int amount;
+
+	/*cin >> number;
+	if (number > max)
+	{
+		 max = number;
+	}
+
+	cin >> number;
+	if (number > max)
+	{
+		max = number;
+	}
+
+	cin >> number;
+	if (number > max)
+	{
+		 max = number;
+	}*/
+
+	cin >> amount;
+	for (int i = 0; i < amount; ++i)
+	{
+		cin >> number;
+		if (number > max && number % 2 == 1)
+		{
+			max = number;
+		}
+	}
+	cout << max;
+	return 0;
+}

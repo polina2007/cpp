@@ -1,7 +1,3 @@
-/*
-пользователь вводит три целых числа, вывести наибольшее из них
-*/
-
 #include <iostream>
 
 using namespace std;
@@ -9,18 +5,18 @@ using namespace std;
 int main()
 {
 	int number;
-	int amountOf3 = 0;
+	int max = INT_MIN;
 	int amount;
 
 	cin >> amount;
 	for (int i = 0; i < amount; ++i)
 	{
 		cin >> number;
-		if (number % 10 == 3)
+		if (number > max && number % 4 == 0)
 		{
-			++amountOf3;
+			max = number;
 		}
 	}
-	cout << amountOf3;
+	cout << max;
 	return 0;
 }
