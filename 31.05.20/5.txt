@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int amount;
+	int number;
+	int sumOfEven = 0;
+	int amount = 0;
+	
+	for (int i = 0; i < amount; i++)
+	{
+		cin >> number;
+                ++amount;
+
+		if (number % 2 == 0)
+		{
+			sumOfEven += number;
+		}
+	}
+		
+	cout << amount << endl << sumOfEvent;
+
+	return 0;
+}

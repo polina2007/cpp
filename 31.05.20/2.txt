@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int amount;
+	int amountOfLessThan30 = 0;
+	int speed;
+	int minSpeed = 301;
+	double maxSpeed = 1;
+
+	cin >> amount;
+	for (int i = 0; i < amount; i++)
+	{
+		cin >> speed;
+
+		if (speed <= 30)
+		{
+			++amountOfLessThan30;
+		}
+		if (speed > maxSpeed )
+		{
+			maxSpeed = speed;
+		}
+
+		if (speed < minSpeed)
+		{
+			minSpeed = speed;
+		}
+
+	}
+
+	cout << maxSpeed - minSpeed << endl << amountOfLessThan30;
+	return 0;
+}

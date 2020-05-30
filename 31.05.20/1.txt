@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int amount;
+	int amountOfLessThan40 = 0;
+	int speed;
+	int minSpeed = 301;
+	double sumSpeed = 0;
+
+	cin >> amount;
+	for (int i = 0; i < amount; i++)
+	{
+		cin >> speed;
+
+		sumSpeed += speed;
+		
+		if (speed <= 40)
+		{
+			++amountOfLessThan40;
+		}
+		
+	}
+
+	if (amountOfLessThan40 > 1)
+	{
+		cout << sumSpeed / amount << endl << "YES";
+	}
+	else
+	{
+		cout << sumSpeed / amount << endl << "NO";
+	}
+
+	return 0;
+}
