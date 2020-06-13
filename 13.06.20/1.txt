@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+	int main()
+    {
+        int number;
+        int amountOfEven5 = 0;
+        int sum = 0;
+        cin >> number;
+        while (number != 0)
+        {
+            sum += number;
+            if (number % 2 == 0 && number % 5 == 0)
+            {
+                ++amountOfEven5;
+            }
+            cin >> number;
+        }
+        cout << sum << endl << amountOfEven5;
+
+    return 0;
+    }

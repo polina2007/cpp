@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+	int main()
+    {
+		int number;
+		int sumOfPositive256 = 0;
+		int amount = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			++amount;
+			if(number > 0 && number <= 256)
+			{
+				sumOfPositive256 += number;
+			}
+			cin >> number;
+		}
+		cout << amount << endl << sumOfPositive256;
+
+    return 0;
+    }

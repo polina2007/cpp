@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int number;
+	int max = INT_MIN;
+	int amount;
+
+	cin >> amount;
+	for (int i = 0; i < amount; ++i)
+	{
+		cin >> number;
+		if (number > max && number % 4 == 0)
+		{
+			max = number;
+		}
+	}
+	cout << max;
+	
+    return 0;
+}

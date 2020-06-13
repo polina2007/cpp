@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int number;
+        int amountOf3 = 0;
+	for (int i = 0; i < 8; i++)
+	{
+	     cin >> number;
+	     if (number % 3 == 0 && number % 10 == 4)
+	      {
+		++amountOf3;
+	      }
+         }
+    cout << amountOf3;
+	
+    return 0;
+}

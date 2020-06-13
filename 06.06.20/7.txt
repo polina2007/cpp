@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+	int main()
+    {
+        int number;
+        int sumOf3 = 0;
+        cin >> number;
+
+        while (number != 0)
+        {
+            if (number % 3 == 0 && number % 10 == 9)
+            {
+                sumOf3 += number;
+            }
+        }
+        cout << sumOf3;
+
+    return 0;
+    }

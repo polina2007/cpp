@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+	int main()
+    {
+		int amount;
+		int amountOfGoodWorks = 0;
+		int number;
+		int amountOfBadWorks = 0;
+
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+
+			if (number = 10)
+			{
+				++amountOfGoodWorks;
+			}
+			if (number < 5)
+			{
+				++amountOfBadWorks;
+			}
+
+		}
+
+		if (amountOfGoodWorks > 0)
+		{
+			cout << amountOfBadWorks << endl << "YES";
+		}
+		else
+		{
+			cout << amountOfBadWorks << endl << "NO";
+		}
+
+    return 0;
+    }
